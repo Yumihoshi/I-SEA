@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## 初始化
 ################################################################################
 
@@ -31,17 +31,17 @@ define gui.accent_color = '#000000'
 define gui.idle_color = '#707070'
 
 ## 小的颜色用于小的文本，需要更亮/更暗才能达到同样的效果。
-define gui.idle_small_color = '#bcbcbc'
+define gui.idle_small_color = '#c7d8da'
 
 ## 当按钮和滑条被悬停时使用的颜色。
-define gui.hover_color = '#0099ff'
+define gui.hover_color = '#00ddff'
 
 ## 当文本按钮被选中但非焦点时使用的颜色。当一个按钮为当前屏幕或设置选项值时，会
 ## 处于选中状态。
 define gui.selected_color = '#555555'
 
 ## 当文本按钮无法被选择时使用的颜色。
-define gui.insensitive_color = '#a3a3a37f'
+define gui.insensitive_color = '#cdcdcd7f'
 
 ## 滑条未填充的部分使用的颜色。这些颜色不直接使用，但在重新生成条形图像文件时使
 ## 用。
@@ -56,13 +56,13 @@ define gui.interface_text_color = '#404040'
 ## 字体和字体大小 #####################################################################
 
 ## 游戏内文本使用的字体。
-define gui.text_font = "SourceHanSansLite.ttf"
+define gui.text_font = "fonts/hanyizhuzisuibingbingjianti.ttf"
 
 ## 角色名称使用的字体。
-define gui.name_text_font = "SourceHanSansLite.ttf"
+define gui.name_text_font = "fonts/SourceHanSansLite.ttf"
 
 ## 游戏外文本使用的字体。
-define gui.interface_text_font = "SourceHanSansLite.ttf"
+define gui.interface_text_font = "fonts/SourceHanSansLite.ttf"
 
 ## 普通对话文本的大小。
 define gui.text_size = 33

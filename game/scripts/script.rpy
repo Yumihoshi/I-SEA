@@ -1,4 +1,4 @@
-﻿screen custom_navigation():
+screen custom_navigation():
     key "mousedown_4" action ShowMenu("history")
     key "mousedown_5" action Return()
 
@@ -10,8 +10,8 @@ label start:
 
     # 火车上
     scene BgTrain1 with dissolve
-    "睁开眼，窗外是蓝色的天空，万里无云，澄澈无边。"
-    extend "\n仿佛深吸一口气就能清空胸中所有的郁结与迷茫。"
+    "睁开眼，窗外是蓝色的天空，万里无云，澄澈无边。\n"
+    extend "仿佛深吸一口气就能清空胸中所有的郁结与迷茫。"
     "然而我现在尝试不了，不知道实际会是怎样的感觉。"
 
     scene BgTrain2 with dissolve
@@ -20,7 +20,7 @@ label start:
     "这是去澄沫市的火车，我的新学校所在的地方。"
     "据说是个能看到海的地方，还真是令人期待啊。我以前只在手机和书上见过对于海的各种描述和图像，但是从来没有自己亲眼见过。"
     "海……会比这片天空更蓝吗？更摄人心魄吗？那宛如圣地一般的种种描述，好想真的亲自见识。"
-    "\"尊敬的女士们先生们，火车即将停靠——请要在澄沫站下车的旅客做好准备，火车即将停靠。\""
+    "“尊敬的女士们先生们，火车即将停靠——请要在澄沫站下车的旅客做好准备，火车即将停靠。”"
     "到站了。"
     jump TrainStation
 
@@ -36,7 +36,7 @@ label TrainStation:
 
 # 宿舍
 label Dormitory:
-    scene BgDormitory with fade
+    scene BgDormitory with blinds
     show CgChenYan
     with dissolve
     "做完各种繁琐的工作后，终于是到了宿舍门前，一打开门就看到一个人正站在房间中央。"
@@ -86,7 +86,10 @@ label NightSea:
     "应该是没想到会有别人来再加上可能社恐吧。"
     "不管了，先试试被海浪拍到手上的感觉。凉凉的，还有泡沫破开残留水渍在手背上，被风一吹更加感觉凉爽。"
     "海，虽然现在给我的体验似乎和普通水槽的效果差不了太多，但是身临其境的感觉果然还是不太一样。"
-    "风吹，潮汐，令人有点晕眩的低气压以及似有似无的咸腥气味\n这就是海吗。这就是海啊。"
+    """\
+    风吹，潮汐，令人有点晕眩的低气压以及似有似无的咸腥气味\n
+    这就是海吗。这就是海啊。
+    """
     "不过似乎该回去了，一个人大晚上在外面待太久也不太好。之后有空再看吧。"
     jump SecondDayDormitory
 
@@ -117,13 +120,20 @@ label Classroom:
     SpeakerChenYan "你没兴趣当吗？"
     SpeakerGuZhou "不想管这些事，感觉还是多做点自己的事更好。"
     SpeakerChenYan "也对，我也不是什么很多精力的人，管好自己就行。"
-    "老师" "那么现在我们的班长就是何沐阳，大家有事都可以找他\n而你也要尽好管理的责任，相信你一定能够做好的！"
+    "老师" """\
+    那么现在我们的班长就是何沐阳，大家有事都可以找他\n
+    而你也要尽好管理的责任，相信你一定能够做好的！
+    """
 
     hide CgChenYan
     hide CgGuZhou
     show CgHeMuYang
     with dissolve
-    SpeakerHeMuYang "谢谢老师给我的机会！我会认真工作的。\n也希望同学们可以信任我并配合我 的工作，也希望我的工作能让大家在正式评选时继续支持我。"
+    SpeakerHeMuYang """\
+    谢谢老师给我的机会！我会认真工作的。\n
+    也希望同学们可以信任我并配合我的工作，也希望我的工作能让大家在正式\n
+    评选时继续支持我。
+    """
 
     hide CgHeMuYang
     show CgChenYan at right:
@@ -149,6 +159,7 @@ label Classroom:
     show CgYouLin
     show CgGuZhou:
         xpos 0.05
+    with dissolve
     "不过，与其说“坐”，她其实是趴在桌子上正在睡觉。"
     "她这才睁开眼睛，和我对视上了一眼，随即又眯起眼睛笑着说。"
     menu:
@@ -226,10 +237,119 @@ label C1:
     "（顾洲闭上了她的眼睛并向后靠在了椅背上）"
     SpeakerChenYan "（怎么。）"
     SpeakerGuZhou "（感觉好装。）"
-    "何沐阳应该是没听到，但是看得到顾洲的闭眼后仰。\n总之尬笑了两下然后低头看了一眼自己手里捏的东西，随后马上又抬起头"
+    """\
+    何沐阳应该是没听到，但是看得到顾洲的闭眼后仰。\n
+    总之尬笑了两下然后低头看了一眼自己手里捏的东西，随后马上又抬起头
+    """
     SpeakerHeMuYang "每个同学个性不一样，不想和我说话也很正常。还是祝你们校园生活愉快！"
 
     hide CgHeMuYang with moveoutright
     "然后他就这么走了，留下一个感觉有点落寞的背影。"
     "老实说，他能在这么大一堆人里面一下找到没见过几次面的我们也挺厉害的。好吧，也许不是挺厉害，是很厉害，而且看样子似乎也记住了我们的名字。是真的厉害吧。"
-    # TODO: PPT 113页
+    jump GoOut
+
+label GoOut:
+    scene BgDormitory with pixellate
+    show CgChenYan with dissolve
+    "暑气已经渐渐消去，太阳已经一周没有毒打过我了。"
+
+    hide CgChenYan
+    show CgYouLin
+    with dissolve
+    "可能也正是因为太阳不会把人晒得蔫蔫的了，游鳞也比前一个月看起来更有活力。"
+
+    hide CgYouLin
+    show CgGuZhou at center
+    with dissolve
+    "至于顾洲，还是一样不怎么喜欢说话，只是做着自己的事，我不提议就也不来找我。但是一旦我叫上她，她十有八九都会来，不来的情况也是有ddl在手。"
+
+    hide CgGuZhou with dissolve
+    "而这周她也是一样在忙着做自己的事情，我就决定约游鳞一起出去。"
+    jump Classroom2
+
+label Classroom2:
+    scene BgClassroom with fade
+    "于是等我们在同一个教室的课下课后我一下就找到她。"
+    
+    show CgYouLin at left:
+        yanchor -0.24
+    show CgChenYan at right:
+        yanchor -0.1
+    with dissolve
+    SpeakerChenYan "游鳞游鳞！你明天周六有没有空？有的话我们去看海吧，我还没有好好去看过。刚好最近天气也没那么热了，这时候去也很合适吧？"
+    "游鳞听着我说话，眼睛慢慢睁大，使得她的眼睛反射的亮光更多，看起来更加有活力。"
+    SpeakerYouLin """\
+    好啊好啊！我也想去！\n
+    明天什么时候？就我们吗？怎么去？走路吗？几点回来？要带东西吗？去了\n
+    会下水吗？
+    """
+    SpeakerChenYan "等一下！好多问题！"
+    SpeakerChenYan """\
+    明天吃完午饭走路去，我记得你也不会骑车吧？\n
+    六点左右回来差不多可以吃晚饭，然后下水的话就看你心情！\n
+    反正我是有点想就在岸边踩一下浅水的地方。
+    """
+    SpeakerYouLin "好哦！"
+    jump Sea
+
+label Sea:
+    scene BgSea with blinds
+    "就这样，到了第二天"
+    "海边，白天的海边啊。"
+    """\
+    原来也不是那样的湛蓝澄澈。它只是反射出天空的状态吧。\n
+    它看起来没那么好是因为现在的天空也没那么晴朗无边了吧。
+    """
+
+    show CgChenYan at right:
+        yanchor -0.1
+    with dissolve
+    "我站在岸边眺望着那水天相接的地方，两种颜色浑然一体。"
+    "所以，其实海洋的颜色，就是天空的颜色吗。"
+    "那我之前期盼的更为撼动心灵的蓝是根本就没有存在过的吗。"
+    "是这样啊。"
+    hide CgChenYan with dissolve
+    "我视线下移，看到一抹纯粹的蓝在移动，那是游鳞在蹲着捡贝壳。"
+    "那样专注，那样投入。"
+    "算了，至少浪花不会辜负触碰它的人，它会给你真实的触感。"
+    "如此，过了不知道到底多久，听到一声呼喊把我拉回了这个我感觉很真实的现实。"
+    "“陈言！”"
+    "是游鳞在喊我。"
+    "我回过神来，坐起身抹了一把脸。刚刚我躺在潮汐处一直等着浪花的击打。"
+    show CgYouLin with dissolve
+    """\
+    我望向她，她的笑颜是如此令人难以忘怀。\n
+    她手里捧着一堆精挑细选过后的贝壳与海螺，再加上她身上那条蓝色的裙子\n
+    仿佛此刻天地间唯有她才是最真实的存在。
+    """
+
+    """\
+    她小跑过来蹲在我旁边\n
+    挑出一个颜色最多，个头最大，又很干净的海螺递给我，\n
+    又用那只手将鬓发抹到耳后。
+    """
+
+    SpeakerYouLin """\
+    哼哼~躺在这里很舒服吧——这个送给你，我挑了这么久感觉最漂亮的\n
+    它也觉得自己最适合送人。
+    """
+
+    "她依然笑着。"
+
+    show CgYouLin at left
+    show CgChenYan at right:
+        yanchor -0.1
+    with dissolve
+    SpeakerChenYan "嗯，谢谢你……"
+    SpeakerChenYan "……谢谢你，谢谢。"
+    SpeakerYouLin "啊，看那边，是橙色的！"
+
+    hide CgChenYan
+    show CgYouLin at center
+    with dissolve
+    "我顺着她手指的方向看过去，是夕阳，和它所照射到的云还有那一片天空，都成了橙色的。"
+    "也很好看啊。"
+    SpeakerChenYan "走吧，是时候该回去了吧。（淡笑）"
+
+    "未完待续……"
+    return

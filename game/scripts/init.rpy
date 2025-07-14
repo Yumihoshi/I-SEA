@@ -47,6 +47,10 @@ init:
         "images/Bg/DiningHall.png"
         fit "cover"
 
+    image BgSea:
+        "images/Bg/Sea.png"
+        fit "cover"
+
     # 角色立绘
     image CgChenYan:
         "images/Character/ChenYan.png"
