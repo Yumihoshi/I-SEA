@@ -1,0 +1,24 @@
+*.rpyc
+*.rpymc
+game/cache/
+game/saves/
+log.txt
+traceback.txt
+errors.txt
+
+# 编译与临时文件
+*.bak
+*.tmp
+__pycache__/
+
+# 开发环境
+.vscode/          # VSCode 配置（若团队使用其他 IDE 可忽略）
+.idea/            # JetBrains IDE 配置
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 本地测试数据
+*.csv
+*.json
